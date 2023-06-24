@@ -14,6 +14,10 @@ repositories {
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
 
+dependencies {
+    commonMainImplementation("com.alibaba.fastjson2:fastjson2:2.0.34")
+}
+
 kotlin {
     jvm {
         jvmToolchain(17)
@@ -30,7 +34,7 @@ kotlin {
 
 compose.desktop {
     application {
-        mainClass = "BSMainKt"
+        mainClass = "com.niangaoa.business_simulator_client.BSMainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "BusinessSimulatorClient"
